@@ -121,7 +121,6 @@ public class NumberTriangle {
 
         String line = br.readLine();
         while (line != null) {
-            // TODO process the line
             List<NumberTriangle> currentList = new ArrayList<>();
             String[] parts = line.split(" ");
             for (int i = 0; i < parts.length; i++) {
@@ -132,8 +131,8 @@ public class NumberTriangle {
             }
             else{
                 for (int i = 0; i < prevList.size(); i++) {
-                    prevList.get(i).setLeft(currentList.get(2 * i));
-                    prevList.get(i).setRight(currentList.get(2 * i + 1));
+                    prevList.get(i).setLeft(currentList.get(i));
+                    prevList.get(i).setRight(currentList.get(i + 1));
                 }
             }
             prevList =  currentList;
